@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div p{
+            background-color: red;
+        }
+        #container > p{
+            background-color: teal;
+        }
+        span > p{
+            background-color: yellow;
+        }
+        #container ~ p{
+            background-color: pink;
+        }
+        #container + p{
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <h1>general sibling selector</h1>
+    <h1>students task: what is bg color of p1,p2,p3,p4,p5,p6</h1>
+
+    <div id="container">
+        <p>I am p1</p>                  <!--red // teal-->
+        <div>
+            <p>I am p2</p>              <!--red-->
+        </div>        
+    </div>
+
+    <p>I am p3</p>                      <!--pink // orange-->
+    <p>I am p5</p>                      <!--pink-->
+    <p>I am p6</p>                      <!--pink-->
+
+    <span>
+        <p>I am p4</p>                  <!--yellow-->
+    </span>
+</body>
+</html>
